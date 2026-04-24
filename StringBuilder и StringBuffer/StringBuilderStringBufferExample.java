@@ -1,4 +1,34 @@
+/**
+ * Программа для демонстрации методов StringBuilder и StringBuffer.
+ * 
+ * StringBuilder и StringBuffer - изменяемые строки.
+ * Отличие: StringBuffer потокобезопасный (синхронизированный),
+ *          StringBuilder непотокобезопасный (быстрее).
+ * 
+ * Основные методы:
+ * - append() - добавление в конец
+ * - insert() - вставка по индексу
+ * - delete() - удаление диапазона
+ * - deleteCharAt() - удаление символа
+ * - replace() - замена диапазона
+ * - reverse() - переворот строки
+ * - length() - длина строки
+ * - charAt() - символ по индексу
+ * - setCharAt() - замена символа
+ * - substring() - получение подстроки
+ * 
+ * @author Тачилина Мария
+ * @version 1.0
+ * @since 2026-04-24
+ */
 public class StringBuilderStringBufferExample {
+    
+    /**
+     * Главный метод программы.
+     * Демонстрирует 10 методов StringBuilder и 10 методов StringBuffer.
+     * 
+     * @param args аргументы командной строки (не используются)
+     */
     public static void main(String[] args) {
         
         System.out.println("STRINGBUILDER");
@@ -6,42 +36,42 @@ public class StringBuilderStringBufferExample {
         // StringBuilder (непотокобезопасный, но быстрее)
         StringBuilder sb = new StringBuilder("Hello");
         
-        // 1. append() - добавляет строку
+        // append() - добавляет строку в конец
         sb.append(" World");
-        System.out.println("1. append: " + sb); // Hello World
+        System.out.println("1. append: " + sb);
         
-        // 2. insert() - вставляет по индексу
+        // insert() - вставляет строку по указанному индексу
         sb.insert(5, " Java");
-        System.out.println("2. insert: " + sb); // Hello Java World
+        System.out.println("2. insert: " + sb);
         
-        // 3. delete() - удаляет диапазон
+        // delete() - удаляет символы с start до end
         sb.delete(5, 10);
-        System.out.println("3. delete: " + sb); // Hello World
+        System.out.println("3. delete: " + sb);
         
-        // 4. deleteCharAt() - удаляет символ
+        // deleteCharAt() - удаляет символ по индексу
         sb.deleteCharAt(5);
-        System.out.println("4. deleteCharAt: " + sb); // HelloWorld
+        System.out.println("4. deleteCharAt: " + sb);
         
-        // 5. replace() - заменяет диапазон
+        // replace() - заменяет часть строки
         sb.replace(0, 5, "Hi");
-        System.out.println("5. replace: " + sb); // HiWorld
+        System.out.println("5. replace: " + sb);
         
-        // 6. reverse() - переворачивает
+        // reverse() - переворачивает строку
         sb.reverse();
-        System.out.println("6. reverse: " + sb); // dlroW iH
+        System.out.println("6. reverse: " + sb);
         
-        // 7. length() - длина строки
-        System.out.println("7. length: " + sb.length()); // 9
+        // length() - возвращает длину строки
+        System.out.println("7. length: " + sb.length());
         
-        // 8. charAt() - символ по индексу
-        System.out.println("8. charAt(0): " + sb.charAt(0)); // d
+        // charAt() - возвращает символ по индексу
+        System.out.println("8. charAt(0): " + sb.charAt(0));
         
-        // 9. setCharAt() - меняет символ
+        // setCharAt() - заменяет символ по индексу
         sb.setCharAt(0, 'D');
-        System.out.println("9. setCharAt: " + sb); // DlroW iH
+        System.out.println("9. setCharAt: " + sb);
         
-        // 10. substring() - подстрока
-        System.out.println("10. substring(0,5): " + sb.substring(0, 5)); // DlroW
+        // substring() - возвращает подстроку
+        System.out.println("10. substring(0,5): " + sb.substring(0, 5));
         
         
         System.out.println("\nSTRINGBUFFER");
@@ -49,41 +79,41 @@ public class StringBuilderStringBufferExample {
         // StringBuffer (потокобезопасный, но медленнее)
         StringBuffer sbf = new StringBuffer("Hello");
         
-        // 1. append() - добавляет строку
+        // append() - добавляет строку в конец
         sbf.append(" World");
-        System.out.println("1. append: " + sbf); // Hello World
+        System.out.println("1. append: " + sbf);
         
-        // 2. insert() - вставляет по индексу
+        // insert() - вставляет строку по указанному индексу
         sbf.insert(5, " Java");
-        System.out.println("2. insert: " + sbf); // Hello Java World
+        System.out.println("2. insert: " + sbf);
         
-        // 3. delete() - удаляет диапазон
+        // delete() - удаляет символы с start до end
         sbf.delete(5, 10);
-        System.out.println("3. delete: " + sbf); // Hello World
+        System.out.println("3. delete: " + sbf);
         
-        // 4. deleteCharAt() - удаляет символ
+        // deleteCharAt() - удаляет символ по индексу
         sbf.deleteCharAt(5);
-        System.out.println("4. deleteCharAt: " + sbf); // HelloWorld
+        System.out.println("4. deleteCharAt: " + sbf);
         
-        // 5. replace() - заменяет диапазон
+        // replace() - заменяет часть строки
         sbf.replace(0, 5, "Hi");
-        System.out.println("5. replace: " + sbf); // HiWorld
+        System.out.println("5. replace: " + sbf);
         
-        // 6. reverse() - переворачивает
+        // reverse() - переворачивает строку
         sbf.reverse();
-        System.out.println("6. reverse: " + sbf); // dlroW iH
+        System.out.println("6. reverse: " + sbf);
         
-        // 7. length() - длина строки
-        System.out.println("7. length: " + sbf.length()); // 9
+        // length() - возвращает длину строки
+        System.out.println("7. length: " + sbf.length());
         
-        // 8. charAt() - символ по индексу
-        System.out.println("8. charAt(0): " + sbf.charAt(0)); // d
+        // charAt() - возвращает символ по индексу
+        System.out.println("8. charAt(0): " + sbf.charAt(0));
         
-        // 9. setCharAt() - меняет символ
+        // setCharAt() - заменяет символ по индексу
         sbf.setCharAt(0, 'D');
-        System.out.println("9. setCharAt: " + sbf); // DlroW iH
+        System.out.println("9. setCharAt: " + sbf);
         
-        // 10. substring() - подстрока
-        System.out.println("10. substring(0,5): " + sbf.substring(0, 5)); // DlroW
+        // substring() - возвращает подстроку
+        System.out.println("10. substring(0,5): " + sbf.substring(0, 5));
     }
 }
